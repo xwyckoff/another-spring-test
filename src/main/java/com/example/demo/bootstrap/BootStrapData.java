@@ -7,16 +7,19 @@ import com.example.demo.domain.Author;
 import com.example.demo.domain.Book;
 import com.example.demo.domain.repositories.AuthorRepository;
 import com.example.demo.domain.repositories.BookRepository;
+import com.example.demo.domain.repositories.PublisherRepository;
 
 @Component
 public class BootStrapData implements CommandLineRunner {
 
     private final AuthorRepository authorRepository;
     private final BookRepository bookRepository;
+    private final PublisherRepository publisherRepository;
 
-    public BootStrapData(AuthorRepository authorRepository, BookRepository bookRepository) {
+    public BootStrapData(AuthorRepository authorRepository, BookRepository bookRepository, PublisherRepository publisherRepository) {
         this.authorRepository = authorRepository;
         this.bookRepository = bookRepository;
+        this.publisherRepository = publisherRepository;
     }
 
     @Override
